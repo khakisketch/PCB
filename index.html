@@ -643,17 +643,10 @@ code {
 .split, .grid2 { gap: 16px; }
 .grid2 + .card, .split + .card, .dash-grid + .card, .dash-grid + .dash-grid, .card + .dash-grid, .insp-grid + .card { margin-top: 16px; }
 
-/* ── 바깥 틀: 연보라 배경 위의 흰 둥근 프레임 (데스크톱) ──────────────────── */
+/* ── 바깥 틀 ──────────────────── */
 body { background: var(--bg-app); }
-@media (min-width: 1101px) {
-  #app:has(.shell) { padding: 24px; }
-  .shell {
-    border-radius: 30px; overflow: hidden; background: var(--frame);
-    border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
-    box-shadow: 0 34px 70px -34px rgba(34, 45, 100, .48);
-  }
-  html[data-theme="dark"] .shell { box-shadow: 0 34px 70px -28px rgba(0, 0, 0, .75); }
-}
+/* 화면 전체를 꽉 채우는 배치(여백·둥근 테두리·그림자 없음) */
+.shell { background: var(--frame); border-radius: 0; border: 0; box-shadow: none; }
 .main { background: var(--frame); padding: 0 0 32px; }
 .main-inner { max-width: none; margin: 0; padding: 0 28px; }
 .main-inner > .page-head {
